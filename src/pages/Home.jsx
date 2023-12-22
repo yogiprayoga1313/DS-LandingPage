@@ -16,6 +16,11 @@ function Home() {
     const handleOpen = () => {
         setOpen(true);
     };
+
+    const handleCloseModal = () => {
+        setOpen(false);
+    };
+
     return (
         <>
             <div>
@@ -43,14 +48,16 @@ function Home() {
                             </span>
                         </div>
                         <div>
-                            <div className='bg-[#FFAB07] md:w-[222px] md:h-[52px] w-[190px] h-[52px] justify-around items-center flex rounded-3xl'>
+                            <button className='bg-[#FFAB07] md:w-[222px] md:h-[52px] w-[190px] h-[52px] justify-around items-center flex rounded-3xl' onClick={handleOpen}>
                                 <span className='text-white md:ml-5 md:text-lg text-md ml-2'>Pesan Sekarang</span>
-                                <div className='bg-white rounded-full md:w-10 md:h-10 w-10 h-10 flex justify-center items-center hover:bg-gray-100'  onClick={handleOpen} >
+                                <div className='bg-white rounded-full md:w-10 md:h-10 w-10 h-10 flex justify-center items-center hover:bg-gray-100' >
                                     <div>
-                                        {open && <BasicModal />}
+                                        <IoMdArrowRoundForward size={20} color='black' />
+
                                     </div>
                                 </div>
-                            </div>
+                            </button>
+                            <BasicModal statusOpen={open} onCloseModal={handleCloseModal} />
                         </div>
                     </div>
                 </div>
@@ -151,13 +158,17 @@ function Home() {
                         </div>
                     </div>
                     <div className='flex justify-center items-center mt-10'>
-                        <div className='bg-[#FFAB07] w-[222px] h-[52px] justify-around items-center flex rounded-3xl'>
-                            <span className='text-white ml-5'>Pesan Sekarang</span>
-                            <div className='bg-white rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-100' onClick={handleOpen}>
-                                <div >
-                                {open && <BasicModal />}
+                        <div>
+                            <button className='bg-[#FFAB07] md:w-[222px] md:h-[52px] w-[190px] h-[52px] justify-around items-center flex rounded-3xl' onClick={handleOpen}>
+                                <span className='text-white md:ml-5 md:text-lg text-md ml-2'>Pesan Sekarang</span>
+                                <div className='bg-white rounded-full md:w-10 md:h-10 w-10 h-10 flex justify-center items-center hover:bg-gray-100' >
+                                    <div>
+                                        <IoMdArrowRoundForward size={20} color='black' />
+
+                                    </div>
                                 </div>
-                            </div>
+                            </button>
+                            <BasicModal statusOpen={open} onCloseModal={handleCloseModal} />
                         </div>
                     </div>
                 </div>
