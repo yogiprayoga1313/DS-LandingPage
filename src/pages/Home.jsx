@@ -64,7 +64,7 @@ function Home() {
                         Berasal dari Distributors terbaik. untuk semua pelanggan terbaik Dapoer Sakha.
                     </span>
                 </div>
-                <div className='md:flex md:justify-center md:items-center md:gap-36 gap-5 mt-16'>
+                <div className='md:flex md:justify-center md:items-center md:gap-36 gap-5'>
                     <div className='flex flex-col items-center text-center'>
                         <RiCake3Line size={150} color='#FFAB07' />
                         <span className='w-[246px] font-bold text-2xl'>
