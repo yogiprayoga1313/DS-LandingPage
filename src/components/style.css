@@ -1,0 +1,15 @@
+
+/* Styles for the arrow buttons */
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+    /* Animation transition */
+}
+
+/* Animation effect when the button is pressed */
+.arrow-button:active {
+    transform: scale(0.9);
+    /* Change the scale on click */
+}
