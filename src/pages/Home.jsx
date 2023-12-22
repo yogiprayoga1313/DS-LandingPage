@@ -30,7 +30,7 @@ function Home() {
                 <div className='flex flex-col lg:flex-row justify-center gap-20 items-center'>
                     <div>
                         <span>
-                            <img src="public/cover-1.jpg" alt="img-cover-1" className='rounded-full md:w-[450px] md:h-[450px] w-[320px] h-[320px] object-cover' />
+                            <img src="/public/cover-1.jpg" alt="img-cover-1" className='rounded-full md:w-[450px] md:h-[450px] w-[320px] h-[320px] object-cover' />
                         </span>
                     </div>
                     <div className='flex flex-col gap-5'>
@@ -121,7 +121,7 @@ function Home() {
                     </div>
                     <div id="menuSection" ref={menuSectionRef} className='md:flex gap-11'>
                         <div className='mb-10 md:mb-0'>
-                            <img src="public/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
+                            <img src="/public/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Nasi Box</span>
                                 <span className='text-md opacity-70'>
@@ -130,7 +130,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='mb-10 md:mb-0'>
-                            <img src="public/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
+                            <img src="/public/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Nasi Box</span>
                                 <span className='text-md opacity-70'>
@@ -139,7 +139,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='mb-10 md:mb-0'>
-                            <img src="public/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
+                            <img src="/public/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Nasi Box</span>
                                 <span className='text-md opacity-70'>
@@ -148,7 +148,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='mb-10 md:mb-0'>
-                            <img src="public/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
+                            <img src="/public/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Nasi Box</span>
                                 <span className='text-md opacity-70'>
@@ -199,7 +199,7 @@ function Home() {
                     </div>
                     <div className='flex justify-center items-center gap-5'>
                         <div>
-                            <img src="public/cover-3.jpg" alt="" className='rounded-full w-[80px] h-[80px]' />
+                            <img src="/public/cover-3.jpg" alt="" className='rounded-full w-[80px] h-[80px]' />
                         </div>
                         <div className='flex flex-col'>
                             <span className='text-md font-bold'>Yogi Prayoga</span>

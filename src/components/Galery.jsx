@@ -4,14 +4,14 @@ import './style.css'
 
 // Dummy data gambar
 const imageData = [
-    { id: 1, src: 'public/cover-1.jpg' },
-    { id: 2, src: 'public/cover-2.jpg' },
-    { id: 3, src: 'public/cover-3.jpg' },
-    { id: 4, src: 'public/cover-1.jpg' },
-    { id: 5, src: 'public/cover-2.jpg' },
-    { id: 6, src: 'public/cover-3.jpg' },
-    { id: 7, src: 'public/cover-1.jpg' },
-    { id: 8, src: 'public/cover-2.jpg' },
+    { id: 1, src: '/public/cover-1.jpg' },
+    { id: 2, src: '/public/cover-2.jpg' },
+    { id: 3, src: '/public/cover-3.jpg' },
+    { id: 4, src: '/public/cover-1.jpg' },
+    { id: 5, src: '/public/cover-2.jpg' },
+    { id: 6, src: '/public/cover-3.jpg' },
+    { id: 7, src: '/public/cover-1.jpg' },
+    { id: 8, src: '/public/cover-2.jpg' },
 ];
 
 const imagesPerPage = 4;
