@@ -19,7 +19,7 @@ const style = {
 
 export default function BasicModal({ statusOpen, onCloseModal }) {
     const [open, setOpen] = React.useState(false);
-    const contactWa = `https://api.whatsapp.com/send/?phone=6282214899172&app_absent=0`;
+    const contactWa = `https://api.whatsapp.com/send/?phone=6283863683761&app_absent=0`;
 
     React.useEffect(() => {
         setOpen(statusOpen);
