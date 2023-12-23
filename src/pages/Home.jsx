@@ -134,25 +134,25 @@ function Home() {
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Snack Box</span>
                                 <span className='text-md opacity-70'>
-                                    Snack box terbaik untuk anda
+                                    Snack box beraneka ragam pilihan 
                                 </span>
                             </div>
                         </div>
                         <div className='mb-10 md:mb-0'>
-                            <img src="/assets/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
+                            <img src="/assets/IMG_7138_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' />
                             <div className='flex flex-col gap-1'>
-                                <span className='text-xl font-bold'>Nasi Box</span>
+                                <span className='text-xl font-bold'>Pisang Coklat</span>
                                 <span className='text-md opacity-70'>
-                                    Nasi box terbaik untuk anda
+                                    Pisang Coklat pilihan terbaik
                                 </span>
                             </div>
                         </div>
                         <div className='mb-10 md:mb-0'>
-                            <img src="/assets/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
+                            <img src="/assets/IMG_7163_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' />
                             <div className='flex flex-col gap-1'>
-                                <span className='text-xl font-bold'>Nasi Box</span>
+                                <span className='text-xl font-bold'>Brownies Kukus</span>
                                 <span className='text-md opacity-70'>
-                                    Nasi box terbaik untuk anda
+                                    Brownies Kukus Selalu tersedia
                                 </span>
                             </div>
                         </div>

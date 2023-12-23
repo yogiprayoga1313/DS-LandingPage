@@ -8,10 +8,18 @@ const imageData = [
     { id: 2, src: '/assets/IMG_5886.jpeg' },
     { id: 3, src: '/assets/IMG_5873.jpeg' },
     { id: 4, src: '/assets/IMG_5874.jpeg' },
-    { id: 5, src: '/assets/cover-2.jpg' },
-    { id: 6, src: '/assets/cover-3.jpg' },
-    { id: 7, src: '/assets/cover-1.jpg' },
-    { id: 8, src: '/assets/cover-2.jpg' },
+    { id: 5, src: '/assets/IMG_4109_11zon.jpg' },
+    { id: 6, src: '/assets/IMG_6361_11zon.jpg' },
+    { id: 7, src: '/assets/IMG_7114_11zon.jpg' },
+    { id: 8, src: '/assets/IMG_7119_11zon.jpg' },
+    { id: 9, src: '/assets/IMG_7130_11zon.jpg' },
+    { id: 10, src: '/assets/IMG_7138_11zon.jpg' },
+    { id: 11, src: '/assets/IMG_7143_11zon.jpg' },
+    { id: 12, src: '/assets/IMG_7147_11zon.jpg' },
+    { id: 13, src: '/assets/IMG_7163_11zon.jpg' },
+    { id: 13, src: '/assets/IMG_7288_11zon.jpg' },
+    { id: 13, src: '/assets/IMG_7291_11zon.jpg' },
+    { id: 13, src: '/assets/IMG_7114 2.png' },
 ];
 
 const imagesPerPage = 4;
