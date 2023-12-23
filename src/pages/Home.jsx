@@ -30,7 +30,7 @@ function Home() {
                 <div className='flex flex-col lg:flex-row justify-center gap-20 items-center'>
                     <div>
                         <span>
-                            <img src="/assets/cover-1.jpg" alt="img-cover-1" className='rounded-full md:w-[450px] md:h-[450px] w-[320px] h-[320px] object-cover' />
+                            <img src="/assets/IMG_5890.jpeg" alt="img-cover-1" className='rounded-full md:w-[450px] md:h-[450px] w-[320px] h-[320px] object-cover' />
                         </span>
                     </div>
                     <div className='flex flex-col gap-5'>
@@ -42,7 +42,7 @@ function Home() {
                         </div>
                         <div className='md:w-[400px] w-[270px] md:text-lg text-md opacity-60'>
                             <span>
-                                Dapoer Sakha selalu menyajikan makanan yang
+                                Dapoer Sakha selalu menyediakan makanan yang
                                 sehat dan higienist untuk disajikan sehingga aman
                                 dan baik untuk dikonsumsi.
                             </span>
@@ -78,7 +78,7 @@ function Home() {
                             Lezat & Sehat
                         </span>
                         <span className='w-[260px] h-auto opacity-70'>
-                            Purpose being screen drunk create the man there top a man
+                            Makanan yang dibuat dengan cinta, dan dari bahan terbaik.
                         </span>
                     </div>
                     <div className='md:flex flex flex-col items-center text-center'>
@@ -87,7 +87,7 @@ function Home() {
                             Chef Handal
                         </span>
                         <span className='w-[260px] h-auto opacity-70'>
-                            Purpose being screen drunk create the man there top a man
+                            Chef profesional yang sudah berpengalaman.
                         </span>
                     </div>
                     <div className='flex flex-col items-center text-center'>
@@ -96,15 +96,15 @@ function Home() {
                             Pengiriman Cepat
                         </span>
                         <span className='w-[260px] h-auto opacity-70'>
-                            Purpose being screen drunk create the man there top a man
+                            Layanan ini memudahkan pelanggan untuk memesan makanan.
                         </span>
                     </div>
                 </div>
             </div>
             <div className='flex justify-center items-center mt-28 flex-col mb-10 gap-10'>
                 <div className='flex flex-col justify-center items-center gap-3'>
-                    <span className='md:text-4xl text-2xl font-bold text-[#FFAB07]'>The Gallery product</span>
-                    <span className='w-[200px] text-center opacity-70'>Sample Product yang sudah kami layani</span>
+                    <span className='md:text-4xl text-2xl font-bold text-[#FFAB07]'>The Gallery Product</span>
+                    <span className='w-[250px] text-center opacity-70'>Sample Product yang tersedia di Dapoer Sakha.</span>
                 </div>
                 <div className='flex gap-4'>
                     <Gallery />
@@ -113,15 +113,15 @@ function Home() {
             <div className='flex flex-col justify-center items-center md:mt-28'>
                 <div className='flex flex-col gap-10'>
                     <div className='flex flex-col gap-1'>
-                        <span className='md:text-4xl text-xl font-bold text-[#FFAB07]'>Item teratas yang kami miliki</span>
-                        <span className='md:w-[474px] w-[260px] opacity-70 text-md'>
+                        <span className='md:text-4xl text-xl font-bold text-[#FFAB07]'>Item Teratas Dapoer Sakha</span>
+                        <span className='md:w-[574px] w-[260px] opacity-70 text-md'>
                             Produk ini adalah pilihan utama kami, dipilih dengan hati-hati
                             untuk  memenuhi kebutuhan anda dengan keunggulan terbaik.
                         </span>
                     </div>
                     <div id="menuSection" ref={menuSectionRef} className='md:flex gap-11'>
                         <div className='mb-10 md:mb-0'>
-                            <img src="/assets/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
+                            <img src="/assets/IMG_5890.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Nasi Box</span>
                                 <span className='text-md opacity-70'>
@@ -130,11 +130,11 @@ function Home() {
                             </div>
                         </div>
                         <div className='mb-10 md:mb-0'>
-                            <img src="/assets/cover-3.jpg" alt="" className='w-[255px] h-[255px] rounded-md' />
+                            <img src="/assets/IMG_5873.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' />
                             <div className='flex flex-col gap-1'>
-                                <span className='text-xl font-bold'>Nasi Box</span>
+                                <span className='text-xl font-bold'>Snack Box</span>
                                 <span className='text-md opacity-70'>
-                                    Nasi box terbaik untuk anda
+                                    Snack box terbaik untuk anda
                                 </span>
                             </div>
                         </div>
@@ -199,7 +199,7 @@ function Home() {
                     </div>
                     <div className='flex justify-center items-center gap-5'>
                         <div>
-                            <img src="/assets/cover-3.jpg" alt="" className='rounded-full w-[80px] h-[80px]' />
+                            <img src="/assets/IMG_0425 (1).jpg" alt="" className='rounded-full w-[80px] h-[80px] object-cover' />
                         </div>
                         <div className='flex flex-col'>
                             <span className='text-md font-bold'>Yogi Prayoga</span>

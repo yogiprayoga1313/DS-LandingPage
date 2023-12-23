@@ -4,10 +4,10 @@ import './style.css'
 
 // Dummy data gambar
 const imageData = [
-    { id: 1, src: '/assets/cover-1.jpg' },
-    { id: 2, src: '/assets/cover-2.jpg' },
-    { id: 3, src: '/assets/cover-3.jpg' },
-    { id: 4, src: '/assets/cover-1.jpg' },
+    { id: 1, src: '/assets/IMG_5890.jpeg' },
+    { id: 2, src: '/assets/IMG_5886.jpeg' },
+    { id: 3, src: '/assets/IMG_5873.jpeg' },
+    { id: 4, src: '/assets/IMG_5874.jpeg' },
     { id: 5, src: '/assets/cover-2.jpg' },
     { id: 6, src: '/assets/cover-3.jpg' },
     { id: 7, src: '/assets/cover-1.jpg' },

@@ -29,7 +29,6 @@ const Header = () => {
           <Link className='hover:text-blue-600'>Home</Link>
           <Link className='hover:text-blue-600'>Tentang</Link>
           <Link onClick={handleMenuClick} className='hover:text-blue-600'>Menu</Link>
-          <Link className='hover:text-blue-600'>Contacts</Link>
         </nav>
         <div className='md:hidden'>
           <FaBars
@@ -43,7 +42,6 @@ const Header = () => {
           <Link className='hover:text-blue-600'>Home</Link>
           <Link className='hover:text-blue-600'>Tentang</Link>
           <Link className='hover:text-blue-600'>Menu</Link>
-          <Link className='hover:text-blue-600'>Contacts</Link>
         </div>
       )}
     </div>
