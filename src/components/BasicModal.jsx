@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const style = {
     position: 'absolute',
@@ -70,55 +70,90 @@ export default function BasicModal({ statusOpen, onCloseModal }) {
                             email: '',
                             pesanan: ''
                         }}
-                        onSubmit={values => {
+                        onSubmit={(values, { setSubmitting }) => {
+                            setSubmitting(false);
                             handleSendMessage(values);
                         }}
+                        validate={(values) => {
+                            const errors = {};
+                            if (!values.nama) {
+                                errors.nama = 'Nama wajib diisi!';
+                            }
+                            if (!values.nomorHp) {
+                                errors.nomorHp = 'Nomor telepon wajiib diisi!';
+                            }
+                            if (!values.email) {
+                                errors.email = 'Email harus diisi!';
+                            }
+                            if (!values.pesanan) {
+                                errors.pesanan = 'Cukup tuliskan Nama pesanan dan Quantity saja!';
+                            }
+                            return errors;
+                        }}
                     >
-                        <Form>
-                            <div className='flex flex-col gap-3'>
-                                <div className='flex gap-5'>
-                                    <Field
-                                        name="nama"
-                                        as={TextField}
-                                        sx={{ width: '100%' }}
-                                        label="Nama"
-                                        variant="outlined"
-                                    />
-                                    <Field
-                                        name="nomorHp"
-                                        as={TextField}
-                                        sx={{ width: '100%' }}
-                                        label="No Phone"
-                                        variant="outlined"
-                                    />
+
+                        {({ isSubmitting }) => (
+                            <Form>
+                                <div className='flex flex-col gap-3'>
+                                    <div className='flex gap-5'>
+                                        <div className='w-full'>
+                                            <Field
+                                                name="nama"
+                                                as={TextField}
+                                                sx={{ width: '100%' }}
+                                                label="Nama"
+                                                variant="outlined"
+                                            />
+                                            <ErrorMessage name="nama" render={msg => <div className="error-message text-red-600 text-xs">{msg}</div>} />
+                                        </div>
+                                        <div className='w-full'>
+                                            <Field
+                                                name="nomorHp"
+                                                as={TextField}
+                                                sx={{ width: '100%' }}
+                                                label="No Phone"
+                                                variant="outlined"
+                                            />
+                                            <ErrorMessage name="nomorHp" render={msg => <div className="error-message text-red-600 text-xs">{msg}</div>} />
+                                        </div>
+                                    </div>
+                                    <div className='w-full'>
+                                        <div>
+                                            <Field
+                                                name="email"
+                                                as={TextField}
+                                                sx={{ width: '100%' }}
+                                                label="Email"
+                                                variant="outlined"
+                                            />
+                                            <ErrorMessage name="email" render={msg => <div className="error-message text-red-600 text-xs">{msg}</div>} />
+                                        </div>
+                                    </div>
+                                    <div className='w-full mt-3'>
+                                        <div>
+                                            <Field
+                                                name="pesanan"
+                                                as={TextField}
+                                                sx={{ width: '100%', height: '100%' }}
+                                                label="Pesanan Anda"
+                                                multiline
+                                                rows={8}
+                                                variant="outlined"
+                                                onBlur={(e) => {
+                                                    e.target.form.dispatchEvent(new Event('submit', { cancelable: true }));
+                                                }}
+                                            />
+                                            <ErrorMessage name="pesanan" render={msg => <div className="error-message text-red-600 text-xs">{msg}</div>} />
+                                        </div>
+                                    </div>
+                                    <div className='mt-3'>
+                                        <Button type="submit" variant="contained" color="primary" disabled={isSubmitting}>
+                                            Kirim Pesan
+                                        </Button>
+                                    </div>
                                 </div>
-                                <div className='w-full'>
-                                    <Field
-                                        name="email"
-                                        as={TextField}
-                                        sx={{ width: '100%' }}
-                                        label="Email"
-                                        variant="outlined"
-                                    />
-                                </div>
-                                <div className='w-full mt-3'>
-                                    <Field
-                                        name="pesanan"
-                                        as={TextField}
-                                        sx={{ width: '100%', height: '100%' }}
-                                        label="Pesanan Anda"
-                                        multiline
-                                        rows={8}
-                                        variant="outlined"
-                                    />
-                                </div>
-                                <div className='mt-3'>
-                                    <Button type="submit" variant="contained" color="primary">
-                                        Kirim Pesan
-                                    </Button>
-                                </div>
-                            </div>
-                        </Form>
+                            </Form>
+                        )}
                     </Formik>
                 </Box>
             </Modal>
