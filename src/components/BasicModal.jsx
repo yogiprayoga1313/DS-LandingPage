@@ -27,19 +27,18 @@ export default function BasicModal({ statusOpen, onCloseModal }) {
 
     const handleClose = () => {
         setOpen(false);
-        onCloseModal(); // Invoke the callback to update the parent state
+        onCloseModal();
     };
 
     const handleSendMessage = (values) => {
-        const message = `Halo Dapoer Sakha, Saya ${values.nama}. Saya ingin memesan makanan berikut: ${values.pesanan}. Anda dapat menghubungi saya di Nomor Telepon: ${values.nomorHp} atau Email: ${values.email}.`;
+        const message = `Halo Dapoer Sakha, Saya ${values.nama}. Saya ingin memesan: ${values.pesanan}. Anda dapat menghubungi saya di Nomor Telepon / WhatsApp: ${values.nomorHp}. atau Email: ${values.email}. Terima Kasih`;
         const encodedMessage = encodeURIComponent(message);
-        console.log(message)
         const contactWaWithMessage = `${contactWa}&text=${encodedMessage}`;
 
         window.open(contactWaWithMessage, '_blank');
 
         console.log('Pesan telah dikirim!');
-        handleClose(); // Menutup modal setelah mengirim pesan (opsional)
+        handleClose()
     };
 
     return (
@@ -96,7 +95,7 @@ export default function BasicModal({ statusOpen, onCloseModal }) {
                             <Form>
                                 <div className='flex flex-col gap-3'>
                                     <div className='flex gap-5'>
-                                        <div className='w-full'>
+                                        <div className='w-full flex flex-col gap-1'>
                                             <Field
                                                 name="nama"
                                                 as={TextField}
@@ -106,19 +105,19 @@ export default function BasicModal({ statusOpen, onCloseModal }) {
                                             />
                                             <ErrorMessage name="nama" render={msg => <div className="error-message text-red-600 text-xs">{msg}</div>} />
                                         </div>
-                                        <div className='w-full'>
+                                        <div className='w-full  flex flex-col gap-1'>
                                             <Field
                                                 name="nomorHp"
                                                 as={TextField}
                                                 sx={{ width: '100%' }}
-                                                label="No Phone"
+                                                label="No Phone / WhatsApp"
                                                 variant="outlined"
                                             />
                                             <ErrorMessage name="nomorHp" render={msg => <div className="error-message text-red-600 text-xs">{msg}</div>} />
                                         </div>
                                     </div>
                                     <div className='w-full'>
-                                        <div>
+                                        <div className='flex flex-col gap-1'>
                                             <Field
                                                 name="email"
                                                 as={TextField}
@@ -130,7 +129,7 @@ export default function BasicModal({ statusOpen, onCloseModal }) {
                                         </div>
                                     </div>
                                     <div className='w-full mt-3'>
-                                        <div>
+                                        <div className='flex flex-col gap-1'>
                                             <Field
                                                 name="pesanan"
                                                 as={TextField}
