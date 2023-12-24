@@ -78,7 +78,7 @@ export default function Gallery() {
                 ) : (
                     currentImages.map((image, index) => (
                         <div key={index}
-                            className={`flex flex-col gap-3 mb-5 md:mb-0 image-slide ${currentImageIndex === startIndex + index ? 'active' : ''
+                            className={`flex flex-col gap-3 mb-5 md:mb-0 image-slide zoom-image ${currentImageIndex === startIndex + index ? 'active' : ''
                                 }`}
                             onClick={() => handleImageClick(index)}>
                             <img

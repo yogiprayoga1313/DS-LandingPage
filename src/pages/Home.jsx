@@ -7,6 +7,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import BasicModal from '../components/BasicModal';
 import Gallery from '../components/Galery';
 import Header from '../components/Headers';
+import './home.css'
 
 
 function Home() {
@@ -120,7 +121,7 @@ function Home() {
                         </span>
                     </div>
                     <div id="menuSection" ref={menuSectionRef} className='md:flex gap-11'>
-                        <div className='mb-10 md:mb-0'>
+                        <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_5890_11zon.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Nasi Box</span>
@@ -129,7 +130,7 @@ function Home() {
                                 </span>
                             </div>
                         </div>
-                        <div className='mb-10 md:mb-0'>
+                        <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_5873_11zon.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Snack Box</span>
@@ -138,7 +139,7 @@ function Home() {
                                 </span>
                             </div>
                         </div>
-                        <div className='mb-10 md:mb-0'>
+                        <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_7138_11zon_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Pisang Coklat</span>
@@ -147,7 +148,7 @@ function Home() {
                                 </span>
                             </div>
                         </div>
-                        <div className='mb-10 md:mb-0'>
+                        <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_7163_11zon_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Brownies Kukus</span>
@@ -159,7 +160,7 @@ function Home() {
                     </div>
                     {/* Page 2 */}
                     <div id="menuSection" ref={menuSectionRef} className='md:flex gap-11'>
-                        <div className='mb-10 md:mb-0'>
+                        <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_4109_11zon_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Donat Box</span>
@@ -168,7 +169,7 @@ function Home() {
                                 </span>
                             </div>
                         </div>
-                        <div className='mb-10 md:mb-0'>
+                        <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_7291_11zon_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Pie Buah</span>
@@ -177,7 +178,7 @@ function Home() {
                                 </span>
                             </div>
                         </div>
-                        <div className='mb-10 md:mb-0'>
+                        <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_7114_11zon_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Lapis Malang</span>
@@ -186,7 +187,7 @@ function Home() {
                                 </span>
                             </div>
                         </div>
-                        <div className='mb-10 md:mb-0'>
+                        <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/pisang-coklat.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Bolen Lilit</span>

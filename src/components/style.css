@@ -57,3 +57,10 @@
         opacity: 1;
     }
 }
+.zoom-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1); /* Ubah nilai scale sesuai dengan keinginan Anda */
+}
