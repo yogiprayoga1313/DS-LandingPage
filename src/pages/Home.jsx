@@ -236,7 +236,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div>
+            {/* <div>
                 <div className='mt-20'>
                     <div className='flex flex-col gap-5 justify-center items-center'>
                         <span className='text-4xl font-bold text-[#FFAB07]'>Pelanggan Kami</span>
@@ -246,9 +246,9 @@ function Home() {
                         </span>
                     </div>
                 </div>
-            </div>
-            <div className='flex justify-center items-center md:gap-20 gap-6 mt-20'>
-                <div>
+            </div> */}
+            {/* <div className='flex justify-center items-center md:gap-20 gap-6 mt-20'> */}
+                {/* <div>
                     <div className='bg-gray-300 rounded-full w-10 h-10 md:flex md:justify-center md:items-center hover:bg-gray-200 hidden md:block'>
                         <button>
                             <IoMdArrowRoundBack size={20} color='white' />
@@ -278,37 +278,37 @@ function Home() {
                             <IoMdArrowRoundForward size={20} color='white' />
                         </button>
                     </div>
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
             {/* footer */}
             <div className='bg-[#FFAB07]/40 md:p-20 mt-20 w-auto p-10'>
                 <div className='md:flex md:gap-36 gap-5 justify-center'>
                     <div className='flex flex-col gap-3'>
                         <span className='text-2xl font-semibold'>Dapoer Sakha</span>
-                        <span className='w-[200px] opacity-70'>All right reserved twinkle creative 2023</span>
+                        <span className='w-[200px] opacity-70'>All right reserved 2023</span>
                     </div>
                     <div className='md:mt-0 mt-5'>
                         <span className='text-xl font-bold'>Service</span>
                         <div className='flex flex-col opacity-80'>
-                            <Link className=' hover:text-gray-400'>Product</Link>
-                            <Link className=' hover:text-gray-400'>Menu</Link>
-                            <Link className=' hover:text-gray-400'>Quality</Link>
+                            <Link className=' hover:text-gray-400' onClick={handleAboutClick}>Product</Link>
+                            <Link className=' hover:text-gray-400' onClick={handleMenuClick}>Menu</Link>
+                            {/* <Link className=' hover:text-gray-400'>Quality</Link> */}
                         </div>
                     </div>
                     <div className='md:mt-0 mt-5'>
-                        <span className='text-xl font-bold'>Links</span>
+                        {/* <span className='text-xl font-bold'>Links</span> */}
                         <div className='flex flex-col opacity-80'>
-                            <Link className=' hover:text-gray-400'>Home</Link>
-                            <Link className=' hover:text-gray-400'>Tentang</Link>
-                            <Link className=' hover:text-gray-400'>Contacs</Link>
+                            {/* <Link className=' hover:text-gray-400'>Home</Link> */}
+                            {/* <Link className=' hover:text-gray-400' onClick={handleAboutClick}>Tentang</Link> */}
+                            {/* <Link className=' hover:text-gray-400'>Contacs</Link> */}
                         </div>
                     </div>
                     <div className='md:mt-0 mt-5'>
-                        <span className='text-xl font-bold'>Contacs</span>
+                        {/* <span className='text-xl font-bold'>Contacs</span>
                         <div className='flex flex-col opacity-80'>
                             <Link className=' hover:text-gray-400'>Terms & Condotions</Link>
                             <Link className=' hover:text-gray-400'>Provacy Policy</Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
