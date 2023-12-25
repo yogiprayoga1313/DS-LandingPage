@@ -108,7 +108,7 @@ export default function Gallery() {
             ))
           )}
         </div>
-        <div className='flex gap-5 button-wrapper'>
+        {/* <div className='flex gap-5 button-wrapper'>
           <div>
             <div
               className='bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-200'
@@ -129,7 +129,7 @@ export default function Gallery() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
