@@ -149,7 +149,7 @@ function Home() {
                             <div className='flex flex-col gap-1'>
                                 <span className='text-xl font-bold'>Cromboloni</span>
                                 <span className='text-md opacity-70'>
-                                    Open Po Cromboloni tersedia!
+                                    Open PO Cromboloni tersedia!
                                 </span>
                             </div>
                         </div>

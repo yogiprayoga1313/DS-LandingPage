@@ -36,79 +36,100 @@ export default function Gallery() {
     const [currentPage, setCurrentPage] = useState(0);
     const [loading, setLoading] = useState(true);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+  
     const startIndex = currentPage * imagesPerPage;
     const endIndex = startIndex + imagesPerPage;
-
+  
     const currentImages = imageData.slice(startIndex, endIndex);
-
+  
     useEffect(() => {
-        // Simulasi pengunduhan data
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 2000); // Simulasi waktu pengunduhan data
-
-        return () => clearTimeout(timer);
+      // Simulasi pengunduhan data
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 2000); // Simulasi waktu pengunduhan data
+  
+      // Set interval untuk auto slide setiap 2 detik
+      const slideInterval = setInterval(goToNextPage, 2000);
+  
+      return () => {
+        clearTimeout(timer);
+        clearInterval(slideInterval);
+      };
     }, [currentPage]);
-
+  
     const goToPreviousPage = () => {
-        setCurrentPage((prevPage) => Math.max(0, prevPage - 1));
-        setCurrentImageIndex(0);
+      setCurrentPage((prevPage) => Math.max(0, prevPage - 1));
+      setCurrentImageIndex(0);
     };
-
+  
     const goToNextPage = () => {
-        const totalPages = Math.ceil(imageData.length / imagesPerPage);
-        setCurrentPage((prevPage) => Math.min(totalPages - 1, prevPage + 1));
-        setCurrentImageIndex(0);
+      const totalPages = Math.ceil(imageData.length / imagesPerPage);
+      setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
+      setCurrentImageIndex(0);
     };
-
+  
     const handleImageClick = (index) => {
-        const imageIndex = startIndex + index;
-        setCurrentImageIndex(imageIndex);
+      const imageIndex = startIndex + index;
+      setCurrentImageIndex(imageIndex);
     };
+  
     return (
-        <div className='flex justify-center items-center mt-7 flex-col mb-10 gap-10'>
-            <div className='md:flex gap-4'>
-                {loading ? (
-                    Array.from({ length: imagesPerPage }).map((_, index) => (
-                        <div key={index} className='flex flex-col gap-3 mb-5 md:mb-0'>
-                            <Shimmer /> {/* Memanggil komponen Shimmer */}
-                        </div>
-                    ))
-                ) : (
-                    currentImages.map((image, index) => (
-                        <div key={index}
-                            className={`flex flex-col gap-3 mb-5 md:mb-0 image-slide zoom-image ${currentImageIndex === startIndex + index ? 'active' : ''
-                                }`}
-                            onClick={() => handleImageClick(index)}>
-                            <img
-                                src={image.src}
-                                className='w-[280px] h-[345px] object-cover md:mx-0 mx-2 rounded-md'
-                                alt={`Image ${image.id}`}
-                                onLoad={() => setLoading(false)}
-                                loading='lazy'
-                            />
-
-                        </div>
-                    ))
-                )}
-            </div>
-            <div className='flex gap-5 button-wrapper'>
-                <div>
-                    <div className='bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-200' onClick={goToPreviousPage} >
-                        <button className="arrow-button" onClick={goToPreviousPage} >
-                            <IoMdArrowRoundBack size={20} color='white' />
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <div className='bg-[#FFAB07] rounded-full w-10 h-10 flex justify-center items-center hover:bg-[#FFAB07]/70' onClick={goToNextPage} >
-                        <button className="arrow-button" onClick={goToNextPage}>
-                            <IoMdArrowRoundForward size={20} color='white' />
-                        </button>
-                    </div>
-                </div>
-            </div>
+      <div className='flex justify-center items-center mt-7 flex-col mb-10 gap-10'>
+        <div className='md:flex gap-4 gallery-container'>
+          {loading ? (
+            Array.from({ length: imagesPerPage }).map((_, index) => (
+              <div key={index} className='flex flex-col gap-3 mb-5 md:mb-0'>
+                <Shimmer /> {/* Memanggil komponen Shimmer */}
+              </div>
+            ))
+          ) : (
+            currentImages.map((image, index) => (
+              <div
+                key={index}
+                className={`flex flex-col gap-3 mb-5 md:mb-0 image-slide zoom-image ${
+                  currentImageIndex === startIndex + index ? 'active' : ''
+                }`}
+                onClick={() => handleImageClick(index)}
+                style={{ transition: 'transform 0.5s ease-in-out' }}
+              >
+                <img
+                  src={image.src}
+                  className='w-[280px] h-[345px] object-cover md:mx-0 mx-2 rounded-md'
+                  alt={`Image ${image.id}`}
+                  onLoad={() => setLoading(false)}
+                  loading='lazy'
+                  style={{
+                    transform:
+                      currentImageIndex === startIndex + index ? 'scale(1.1)' : 'scale(1)',
+                    transition: 'transform 0.5s ease-in-out',
+                  }}
+                />
+              </div>
+            ))
+          )}
         </div>
+        <div className='flex gap-5 button-wrapper'>
+          <div>
+            <div
+              className='bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center hover:bg-gray-200'
+              onClick={goToPreviousPage}
+            >
+              <button className='arrow-button' onClick={goToPreviousPage}>
+                <IoMdArrowRoundBack size={20} color='white' />
+              </button>
+            </div>
+          </div>
+          <div>
+            <div
+              className='bg-[#FFAB07] rounded-full w-10 h-10 flex justify-center items-center hover:bg-[#FFAB07]/70'
+              onClick={goToNextPage}
+            >
+              <button className='arrow-button' onClick={goToNextPage}>
+                <IoMdArrowRoundForward size={20} color='white' />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     );
-}
+  }
