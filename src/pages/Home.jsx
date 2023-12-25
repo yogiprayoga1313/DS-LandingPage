@@ -247,8 +247,8 @@ function Home() {
                     </div>
                 </div>
             </div> */}
-            {/* <div className='flex justify-center items-center md:gap-20 gap-6 mt-20'> */}
-                {/* <div>
+            {/* <div className='flex justify-center items-center md:gap-20 gap-6 mt-20'>
+                <div>
                     <div className='bg-gray-300 rounded-full w-10 h-10 md:flex md:justify-center md:items-center hover:bg-gray-200 hidden md:block'>
                         <button>
                             <IoMdArrowRoundBack size={20} color='white' />
@@ -268,18 +268,20 @@ function Home() {
                         </div>
                         <div className='flex flex-col'>
                             <span className='text-md font-bold'>Yogi Prayoga</span>
-                            <span className='text-xs opacity-70'>Manager, Dapoer Sakha</span>
+                            <span className='text-xs opacity-70'>Pelanggan Setia</span>
                         </div>
                     </div>
+                    
                 </div>
+                
                 <div>
                     <div className='bg-[#FFAB07] rounded-full w-10 h-10 md:flex md:justify-center md:items-center hover:bg-[#FFAB07]/70 cursor-pointer hidden md:block'>
                         <button>
                             <IoMdArrowRoundForward size={20} color='white' />
                         </button>
                     </div>
-                </div> */}
-            {/* </div> */}
+                </div>
+            </div> */}
             {/* footer */}
             <div className='bg-[#FFAB07]/40 md:p-20 mt-20 w-auto p-10'>
                 <div className='md:flex md:gap-36 gap-5 justify-center'>
@@ -290,8 +292,8 @@ function Home() {
                     <div className='md:mt-0 mt-5'>
                         <span className='text-xl font-bold'>Service</span>
                         <div className='flex flex-col opacity-80'>
-                            <Link className=' hover:text-gray-400' onClick={handleAboutClick}>Product</Link>
-                            <Link className=' hover:text-gray-400' onClick={handleMenuClick}>Menu</Link>
+                            <Link className=' hover:text-gray-400' onClick={handleAboutClick}>Gallery</Link>
+                            <Link className=' hover:text-gray-400' onClick={handleMenuClick}>Product</Link>
                             {/* <Link className=' hover:text-gray-400'>Quality</Link> */}
                         </div>
                     </div>

@@ -41,8 +41,8 @@ const Header = ({ handleMenuClick, handleAboutClick, handleHomeClick }) => {
         </div>
         <nav className='hidden md:flex gap-7 text-white font-semibold'>
           <Link onClick={handleHomeLinkClick} className='hover:text-blue-600'>Home</Link>
-          <Link onClick={handleAboutLinkClick} className='hover:text-blue-600'>Tentang</Link>
-          <Link onClick={handleMenuLinkClick} className='hover:text-blue-600'>Menu</Link>
+          <Link onClick={handleAboutLinkClick} className='hover:text-blue-600'>Gallery</Link>
+          <Link onClick={handleMenuLinkClick} className='hover:text-blue-600'>Product</Link>
         </nav>
         <div className='md:hidden'>
           <FaBars
