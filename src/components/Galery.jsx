@@ -4,9 +4,9 @@ import './style.css'
 
 // Dummy data gambar
 const imageData = [
-    { id: 1, src: '/assets/IMG_5890_11zon.jpeg' },
-    { id: 2, src: '/assets/IMG_7300_11zon.jpg' },
-    { id: 3, src: '/assets/IMG_5873_11zon.jpeg' },
+    { id: 1, src: '/assets/cromboloni-1.jpeg' },
+    { id: 2, src: '/assets/IMG_5890_11zon.jpeg' },
+    { id: 3, src: '/assets/cromboloni-2.jpeg' },
     { id: 4, src: '/assets/IMG_7154_11zon.jpg' },
     { id: 5, src: '/assets/IMG_4109_11zon_11zon.jpg' },
     { id: 6, src: '/assets/IMG_6361_11zon_11zon.jpg' },

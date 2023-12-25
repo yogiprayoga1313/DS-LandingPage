@@ -145,11 +145,11 @@ function Home() {
                     </div>
                     <div className='md:flex gap-11'>
                         <div className='mb-10 md:mb-0 zoom-image'>
-                            <img src="/assets/IMG_5890_11zon.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
+                            <img src="/assets/cromboloni-2.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
-                                <span className='text-xl font-bold'>Nasi Box</span>
+                                <span className='text-xl font-bold'>Cromboloni</span>
                                 <span className='text-md opacity-70'>
-                                    Nasi box terbaik untuk anda
+                                    Open Po Cromboloni tersedia!
                                 </span>
                             </div>
                         </div>
@@ -202,11 +202,11 @@ function Home() {
                             </div>
                         </div>
                         <div className='mb-10 md:mb-0 zoom-image'>
-                            <img src="/assets/IMG_7114_11zon_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
+                            <img src="/assets/IMG_5890_11zon.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
-                                <span className='text-xl font-bold'>Lapis Malang</span>
+                                <span className='text-xl font-bold'>Nasi Box</span>
                                 <span className='text-md opacity-70 w-[250px]'>
-                                    Lapis Malang merupakan lapis terbaik dari kota Malang
+                                    Open Order Nasi Box!
                                 </span>
                             </div>
                         </div>
