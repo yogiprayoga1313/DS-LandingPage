@@ -13,6 +13,8 @@ import './home.css'
 function Home() {
     const [open, setOpen] = React.useState(false);
     const menuSectionRef = React.useRef(null);
+    const aboutSectionRef = React.useRef(null);
+    const homeSectionRef = React.useRef(null);
 
     const handleOpen = () => {
         setOpen(true);
@@ -22,11 +24,30 @@ function Home() {
         setOpen(false);
     };
 
+    const handleMenuClick = () => {
+        if (menuSectionRef.current) {
+            menuSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const handleAboutClick = () => {
+        if (aboutSectionRef.current) {
+            aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
+    const handleHomeClick = () =>{
+        if (homeSectionRef.current) {
+            homeSectionRef.current.scrollIntoView({ behavior: 'smooth'})
+        }
+    }
+
     return (
         <>
             <div>
-                <Header />
+                <Header handleMenuClick={handleMenuClick} handleAboutClick={handleAboutClick} handleHomeClick={handleHomeClick}/>
             </div>
+            <div id="homeSection" ref={homeSectionRef}></div>
             <div className='md:flex md:items-center md:h-[600px] md:justify-center md:pt-40 pt-32'>
                 <div className='flex flex-col lg:flex-row justify-center gap-20 items-center'>
                     <div>
@@ -101,17 +122,19 @@ function Home() {
                         </span>
                     </div>
                 </div>
-            </div>
+            </div >
+            <div id='aboutSection' ref={aboutSectionRef}  ></div>
             <div className='flex justify-center items-center mt-28 flex-col mb-10 gap-10'>
                 <div className='flex flex-col justify-center items-center gap-3'>
                     <span className='md:text-4xl text-2xl font-bold text-[#FFAB07]'>The Gallery Product</span>
                     <span className='w-[250px] text-center opacity-70'>Sample Product yang tersedia di Dapoer Sakha.</span>
                 </div>
                 <div className='flex gap-4'>
-                    <Gallery />
+                    <Gallery  />
                 </div>
             </div>
-            <div className='flex flex-col justify-center items-center md:mt-28'>
+            <div></div>
+            <div id="menuSection" ref={menuSectionRef} className='flex flex-col justify-center items-center md:mt-28'>
                 <div className='flex flex-col gap-10'>
                     <div className='flex flex-col gap-1'>
                         <span className='md:text-4xl text-xl font-bold text-[#FFAB07]'>Item Teratas Dapoer Sakha</span>
@@ -120,7 +143,7 @@ function Home() {
                             untuk  memenuhi kebutuhan anda dengan keunggulan terbaik.
                         </span>
                     </div>
-                    <div id="menuSection" ref={menuSectionRef} className='md:flex gap-11'>
+                    <div className='md:flex gap-11'>
                         <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_5890_11zon.jpeg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
@@ -159,7 +182,7 @@ function Home() {
                         </div>
                     </div>
                     {/* Page 2 */}
-                    <div id="menuSection" ref={menuSectionRef} className='md:flex gap-11'>
+                    <div className='md:flex gap-11'>
                         <div className='mb-10 md:mb-0 zoom-image'>
                             <img src="/assets/IMG_4109_11zon_11zon.jpg" alt="" className='w-[255px] h-[255px] rounded-md object-cover' loading="lazy" />
                             <div className='flex flex-col gap-1'>
@@ -213,13 +236,15 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className='mt-20'>
-                <div className='flex flex-col gap-5 justify-center items-center'>
-                    <span className='text-4xl font-bold text-[#FFAB07]'>Pelanggan Kami</span>
-                    <span className='text-md opacity-70 md:w-[588px] w-[310px] text-center'>
-                        Kehadiran Anda memberi arti pada setiap produk yang kami tawarkan, setiap
-                        layanan yang kami berikan, dan setiap pengalaman yang kami ciptakan.
-                    </span>
+            <div>
+                <div className='mt-20'>
+                    <div className='flex flex-col gap-5 justify-center items-center'>
+                        <span className='text-4xl font-bold text-[#FFAB07]'>Pelanggan Kami</span>
+                        <span className='text-md opacity-70 md:w-[588px] w-[310px] text-center'>
+                            Kehadiran Anda memberi arti pada setiap produk yang kami tawarkan, setiap
+                            layanan yang kami berikan, dan setiap pengalaman yang kami ciptakan.
+                        </span>
+                    </div>
                 </div>
             </div>
             <div className='flex justify-center items-center md:gap-20 gap-6 mt-20'>

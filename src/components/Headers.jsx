@@ -1,34 +1,48 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Header = ({ handleMenuClick, handleAboutClick, handleHomeClick }) => {
   const [showMenu, setShowMenu] = useState(false);
-  const menuSectionRef = useRef(null);
+  const [showAbout, setShowAbout] = useState(false)
+  const [showHome, setShowHome] = useState(false)
+  // const menuSectionRef = useRef(null);
+  // const aboutSectionRef = useRef(null);
+  // const homeSecctionRef = useRef(null)
 
   const handleToggleMenu = () => {
-    setShowMenu(!showMenu);
+    setShowMenu(!showMenu)
+    setShowAbout(!showAbout)
+    setShowHome(!showHome)
   };
 
-  const handleMenuClick = () => {
-    // Lakukan scroll ke bagian Nasi Box di Home
-    if (menuSectionRef.current) {
-      menuSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-    // Tutup menu jika diperlukan
-    setShowMenu(false);
+  const handleMenuLinkClick = () => {
+    handleMenuClick(); // Scroll to the specified section
+    setShowMenu(false); // Close the mobile menu
   };
+
+  const handleAboutLinkClick = () => {
+    handleAboutClick()
+    setShowAbout(false)
+  }
+
+  const handleHomeLinkClick = () =>{
+    handleHomeClick()
+    setShowHome(false)
+
+  }
 
   return (
     <div className='w-full fixed z-10 pb-20'>
       <div className='flex justify-around  items-center bg-[#FFAB07] h-[60px] px-8 md:px-0'>
         <div>
-          <span className='font-bold text-xl text-white'>Dapoer Sakha</span>
+          <Link onClick={handleHomeLinkClick} className='font-bold text-xl text-white'>Dapoer Sakha</Link>
         </div>
         <nav className='hidden md:flex gap-7 text-white font-semibold'>
-          <Link className='hover:text-blue-600'>Home</Link>
-          <Link className='hover:text-blue-600'>Tentang</Link>
-          <Link onClick={handleMenuClick} className='hover:text-blue-600'>Menu</Link>
+          <Link onClick={handleHomeLinkClick} className='hover:text-blue-600'>Home</Link>
+          <Link onClick={handleAboutLinkClick} className='hover:text-blue-600'>Tentang</Link>
+          <Link onClick={handleMenuLinkClick} className='hover:text-blue-600'>Menu</Link>
         </nav>
         <div className='md:hidden'>
           <FaBars
@@ -39,13 +53,20 @@ const Header = () => {
       </div>
       {showMenu && (
         <div className='flex flex-col md:hidden gap-3 bg-[#FFAB07] py-4 px-8'>
-          <Link className='hover:text-blue-600'>Home</Link>
-          <Link className='hover:text-blue-600'>Tentang</Link>
-          <Link className='hover:text-blue-600'>Menu</Link>
+          <Link onClick={handleHomeLinkClick} className='hover:text-blue-600'>Home</Link>
+          <Link onClick={handleAboutLinkClick} className='hover:text-blue-600'>Tentang</Link>
+          <Link onClick={handleMenuLinkClick} className='hover:text-blue-600'>Menu</Link>
         </div>
       )}
     </div>
   );
+};
+
+Header.propTypes = {
+  // Ensure handleMenuClick prop is a function
+  handleMenuClick: PropTypes.func.isRequired,
+  handleAboutClick: PropTypes.func.isRequired,
+  handleHomeClick: PropTypes.func.isRequired,
 };
 
 export default Header;
