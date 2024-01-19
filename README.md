@@ -19,4 +19,4 @@ Web application aimed at introducing and showcasing a cutting-edge product throu
 
 
 ## Dashboard Page
-![Dashboard]()
+![Dashboard](public/assets/dapoersakha.com.png)
