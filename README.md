@@ -1,8 +1,22 @@
-# React + Vite
+# DapoerSakha
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#About The Project
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+About The Project
+Web application aimed at introducing and showcasing a cutting-edge product through a landing page. The landing page is designed to captivate visitors and provide comprehensive information about the featured product. The goal is to create an engaging and informative online presence to attract potential customers and generate interest in the showcased product.
+
+# Feature
+
+- Up-to-date and reliable Product.
+
+# Built with
+
+- [fontend](https://dapoersakha.com/)
+1. [React js ](https://reactjs.org/)
+2. [Tailwind](https://tailwindcss.com/)
+3. [MaterialUI](https://mui.com/)
+
+
+## Dashboard Page
+![Dashboard]()
